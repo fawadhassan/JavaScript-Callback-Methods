@@ -88,3 +88,16 @@ const people= [
 //     console.log(item.name.toLocaleUpperCase());
 // }) ;
 
+//Reduce
+//Iterates over array as like map, filter, find, and Foreach
+//returns a single value -number, array object
+//unlike other callback functions it requires two params
+//first 'acc' the accumlater (the total of all calculation)
+//second is 'curr' the current item
+
+people.reduce(function(acc,curr){
+   console.log(`Total ${acc}`);
+   console.log(`Name: ${curr.name} Salary: ${curr.Salary}`);
+    acc+=curr.Salary;
+    return acc;
+},0);
